@@ -1,3 +1,3 @@
 source :gemcutter
-gem "sinatra"
-gem "haml"
+gem 'sinatra'
+gem 'haml'
