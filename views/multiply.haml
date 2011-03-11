@@ -40,8 +40,8 @@
         #time Time: ______________
         .clear
 
-      - (1..20).each do
+      - (1..@num_rows).each do
         .row 
           - (1..5).each do
-            %div #{rand(13)} x #{rand(13)} = 
+            %div #{@nums[rand(@nums.size)]} x #{rand(13)} = 
 
