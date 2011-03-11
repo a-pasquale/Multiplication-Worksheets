@@ -1,0 +1,47 @@
+!!!
+%html
+  %head
+    :css 
+      #content {
+        width: 600px;
+        margin:0 auto;
+      }
+
+      #header {
+        margin: 20px 0px 20px 0px;
+      }
+
+      #name {
+        float: left;
+      }
+
+      #time {
+        float: right;
+      }
+
+      .clear { 
+        clear: both;
+      }
+
+      .row {
+        clear: both;
+      }
+
+      .row div {
+        float: left;
+        width: 100px;
+        padding: 10px;
+      }
+
+  %body
+    #content
+      #header
+        #name Name: ___________________________
+        #time Time: ______________
+        .clear
+
+      - (1..20).each do
+        .row 
+          - (1..5).each do
+            %div #{rand(13)} x #{rand(13)} = 
+
