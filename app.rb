@@ -1,8 +1,5 @@
 require 'sinatra'
-
-# Set up the game.
-before do
-end
+require 'haml'
 
 get '/multiply' do
   haml :multiply
