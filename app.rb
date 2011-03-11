@@ -2,7 +2,7 @@ require 'bundler/setup'
 require 'sinatra'
 require 'haml'
 
-get '/multiply' do
+get '/' do
   haml :multiply
 end
 
