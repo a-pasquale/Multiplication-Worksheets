@@ -1,18 +1,53 @@
 !!!
-#html
-  #head
-  #body
+%html
+  %head
+    %title Multiplication Worksheet Generator
+    %meta{"http-equiv" => "Content-Type", :content => "text/html; charset=utf-8"}    
+    %link{"rel" => "stylesheet", "href" => "style.css", "type" => "text/css"}
+  %body
     %form{ :action => "/multiply", :method => "post"}
       %fieldset
-        %ul
-          %li
-            %label{:for => "num_probs"} Number of Problems:
-            %input{:type => "text", :name => "num_probs", :class => "text"}
-          %li
-            %label{:for => "nums"} Numbers to include in the worksheet:
+        %div 
+          %h1 Multiplication Worksheets
+        %div
+          %label{:for => "num_probs"} Number of Problems:
+          %input{:type => "text", :name => "num_probs", :class => "text", :value => "100"}
+        %div 
+          %label{:for => "lnums"} Numbers to include in the worksheet:
+        %div
+          %ul
             - (1..12).each do |i|
-              %input{:name=>'nums[]',:type=>'checkbox',:value=>i} 
-                = i
-          %li
-            %input{:type => :submit, :value => "Make a new worksheet"}
-          
+              %li
+                %input{:name=>'lnums[]',:type=>'checkbox',:value=>i,:checked=>''} 
+                  = i
+          #mult X
+          %ul
+            - (1..12).each do |i|
+              %li
+                %input{:name=>'rnums[]',:type=>'checkbox',:value=>i,:checked=>''} 
+                  = i
+          .clear
+        %div
+          %input{:type => :submit, :value => "Make a new worksheet"}
+
+    %form{ :action => "/puzzle", :method => "post"}
+      %fieldset
+        %div
+          %h1 Multiplication Puzzles
+        %div 
+          %label{:for => "lnums"} Numbers to include in the puzzle:
+          %div
+            %ul
+              - (1..12).each do |i|
+                %li
+                  %input{:name=>'lnums[]',:type=>'checkbox',:value=>i,:checked=>''} 
+                    = i
+            #mult X
+            %ul            
+              - (1..12).each do |i|
+                %li
+                  %input{:name=>'rnums[]',:type=>'checkbox',:value=>i,:checked=>''}
+                    = i
+            .clear
+          %div
+            %input{:type => :submit, :value => "Make a new puzzle"}

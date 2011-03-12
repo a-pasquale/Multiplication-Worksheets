@@ -1,38 +1,9 @@
 !!!
 %html
   %head
-    :css 
-      #content {
-        width: 600px;
-        margin:0 auto;
-      }
-
-      #header {
-        margin: 20px 0px 20px 0px;
-      }
-
-      #name {
-        float: left;
-      }
-
-      #time {
-        float: right;
-      }
-
-      .clear { 
-        clear: both;
-      }
-
-      .row {
-        clear: both;
-      }
-
-      .row div {
-        float: left;
-        width: 100px;
-        padding: 10px;
-      }
-
+    %title Multiplication Worksheet Generator
+    %meta{"http-equiv" => "Content-Type", :content => "text/html; charset=utf-8"}
+    %link{"rel" => "stylesheet", "href" => "style.css", "type" => "text/css"}
   %body
     #content
       #header
@@ -43,5 +14,5 @@
       - (1..@num_rows).each do
         .row 
           - (1..5).each do
-            %div #{@nums[rand(@nums.size)]} x #{rand(13)} = 
+            %div #{@lnums[rand(@lnums.size)]} x #{@rnums[rand(@rnums.size)]} = 
 

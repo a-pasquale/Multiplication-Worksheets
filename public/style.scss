@@ -1,0 +1,76 @@
+/* style.scss */
+
+
+#content {
+    width: 600px;
+    margin:0 auto;
+}
+
+#header {
+    margin: 20px 0px 20px 0px;
+}
+
+form {
+    float: left;
+}
+
+form div ul {
+    float: left;
+    list-style-type: none;
+    padding: 0;
+}
+
+#mult {
+    float: left;
+    padding: 120px 30px;
+}
+
+#name {
+    float: left;
+}
+
+#time {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+.row {
+    clear: both;
+}
+
+.row div {
+   float: left;
+   width: 100px;
+   padding: 10px;
+}
+
+.puzzle {
+    margin: 20px;
+    float: left;
+}
+
+.puzzle div {
+  float: left;
+  padding: 0;
+  border: 1px solid black;
+  height: 100%; 
+}
+
+.puzzle .row {
+  height: 50px;
+}
+
+.puzzle .row div{
+  width: 50px;
+}
+
+.answer {
+  text-align: center; 
+}
+.answer div {
+  border: 0;
+  margin-top: 15px;
+}

@@ -1,0 +1,31 @@
+!!!
+%html
+  %head
+    %title Multiplication Worksheet Generator
+    %meta{"http-equiv" => "Content-Type", :content => "text/html; charset=utf-8"}
+    %link{"rel" => "stylesheet", "href" => "style.css", "type" => "text/css"}
+  %body
+    #content
+      #header
+        #name Name: ___________________________
+        #time Time: ______________
+        .clear
+
+      - @num_probs.to_i.times do |i|
+        .puzzle
+          .row
+            .empty
+            .empty
+            .answer
+              %div= @a[i].to_i * @b[i].to_i
+          .row
+            .empty &nbsp;
+            .empty &nbsp;
+            .answer
+              %div= @c[i].to_i * @d[i].to_i
+          .row
+            .answer
+              %div= @a[i].to_i * @c[i].to_i
+            .answer
+              %div= @b[i].to_i * @d[i].to_i
+            .empty
